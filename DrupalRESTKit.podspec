@@ -2,6 +2,7 @@ Pod::Spec.new do |s|
 
 	s.name		= 'DrupalRESTKit'
 	s.version	= '0.0.1'
+	s.ios.deployment_target = '7.0'
 	s.summary 	= 'A iOS library to simplify RESTFul operation from iOS devices to Drupal.'
 	s.homepage	= 'https://github.com/vivekvpandya/DrupalRESTKit'
 	s.license 	= {
