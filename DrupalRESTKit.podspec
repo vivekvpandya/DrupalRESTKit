@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 		:git => 'https://github.com/vivekvpandya/DrupalRESTKit.git',
 		:tag => s.version.to_s
 	}
-	s.source_files	= 'DrupalRESTKit/*.{m,h}'
+	s.source_files	= 'DrupalRESTKit//*.{m,h}’
 	s.requires_arc	= true
 	s.dependency  'AFNetworking'
 end

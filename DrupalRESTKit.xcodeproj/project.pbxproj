@@ -21,7 +21,7 @@
 		CF390A0B1995D18D005A3DB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3909ED1995D18D005A3DB7 /* UIKit.framework */; };
 		CF390A131995D18D005A3DB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF390A111995D18D005A3DB7 /* InfoPlist.strings */; };
 		CF390A151995D18D005A3DB7 /* DrupalRESTKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF390A141995D18D005A3DB7 /* DrupalRESTKitTests.m */; };
-		CFCDC72D1995D40A00BD761C /* Drupal8RESTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDC72C1995D40A00BD761C /* Drupal8RESTSessionManager.m */; };
+		CF4A5DC919968CC4003C0F36 /* Drupal8RESTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4A5DC819968CC4003C0F36 /* Drupal8RESTSessionManager.m */; };
 		CFCDC7301995D41900BD761C /* SDKDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDC72F1995D41900BD761C /* SDKDemoController.m */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +55,8 @@
 		CF390A101995D18D005A3DB7 /* DrupalRESTKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrupalRESTKitTests-Info.plist"; sourceTree = "<group>"; };
 		CF390A121995D18D005A3DB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF390A141995D18D005A3DB7 /* DrupalRESTKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrupalRESTKitTests.m; sourceTree = "<group>"; };
-		CFCDC72B1995D40A00BD761C /* Drupal8RESTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drupal8RESTSessionManager.h; sourceTree = "<group>"; };
-		CFCDC72C1995D40A00BD761C /* Drupal8RESTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drupal8RESTSessionManager.m; sourceTree = "<group>"; };
+		CF4A5DC719968CC4003C0F36 /* Drupal8RESTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drupal8RESTSessionManager.h; path = SDK/Drupal8RESTSessionManager.h; sourceTree = "<group>"; };
+		CF4A5DC819968CC4003C0F36 /* Drupal8RESTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drupal8RESTSessionManager.m; path = SDK/Drupal8RESTSessionManager.m; sourceTree = "<group>"; };
 		CFCDC72E1995D41900BD761C /* SDKDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKDemoController.h; sourceTree = "<group>"; };
 		CFCDC72F1995D41900BD761C /* SDKDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKDemoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,8 +173,8 @@
 		CFCDC72A1995D3C800BD761C /* DrupalRESTKit */ = {
 			isa = PBXGroup;
 			children = (
-				CFCDC72B1995D40A00BD761C /* Drupal8RESTSessionManager.h */,
-				CFCDC72C1995D40A00BD761C /* Drupal8RESTSessionManager.m */,
+				CF4A5DC719968CC4003C0F36 /* Drupal8RESTSessionManager.h */,
+				CF4A5DC819968CC4003C0F36 /* Drupal8RESTSessionManager.m */,
 			);
 			name = DrupalRESTKit;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				CFCDC7301995D41900BD761C /* SDKDemoController.m in Sources */,
 				CF3909FA1995D18D005A3DB7 /* AppDelegate.m in Sources */,
 				CF3909F61995D18D005A3DB7 /* main.m in Sources */,
-				CFCDC72D1995D40A00BD761C /* Drupal8RESTSessionManager.m in Sources */,
+				CF4A5DC919968CC4003C0F36 /* Drupal8RESTSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
