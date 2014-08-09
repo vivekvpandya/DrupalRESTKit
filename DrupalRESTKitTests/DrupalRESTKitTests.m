@@ -3,7 +3,7 @@
 //  DrupalRESTKitTests
 //
 //  Created by Vivek Pandya on 8/9/14.
-//  Copyright (c) 2014 Vivek Pandya. All rights reserved.
+// 
 //
 
 #import <XCTest/XCTest.h>
