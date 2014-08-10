@@ -217,3 +217,16 @@ To get all comments for particular node create REST export for a view. Set entit
 
 ```
 similarly CRUD for user entity type is also available.
+
+#Credits
+This SDK has been created as a part of a GSoC 2014 project called [Example iOS app for Drupal 8 ](https://github.com/vivekvpandya/TipsAndTricksAFNetworkingDrupal) by [Vivek Pandya ](https://github.com/vivekvpandya)
+and [Jeff Linwood ](https://github.com/jefflinwood) as mentor.
+
+#Maintainers
+[Vivek Pandya ](https://github.com/vivekvpandya) [@VivekvPandya ](https://twitter.com/VivekvPandya)
+
+#License
+DrupalRESTKit is available under MIT license. See LICENSE file for more info.
+
+#### Help us to improve, send us pull request.
+![alt tag](https://dl.dropboxusercontent.com/u/100492838/53471681.jpg)
