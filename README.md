@@ -115,3 +115,53 @@ Same as POST on node.
     }];
 
 ```
+### `GET` data from View based REST Export
+Here viewName is path for your REST Export.
+```objective-c
+Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    [manager GETView:self.baseURL
+            viewName:@"vocabulary/foss"
+          parameters:nil
+             success:^(NSURLSessionDataTask *task, id responseObject) {
+                 NSLog(@"%@",responseObject);
+    }
+             failure:^(NSURLSessionDataTask *task, NSError *error) {
+                 NSLog(@"%@",error.description);
+             }];
+
+```
+### `POST` comments on node
+Here targetEntityId is an entity id on which comment will be posted.
+```objective-c
+  Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+   
+    [manager setValue:@"your base 64  basic auth string" forHTTPRequestHeader:@"Authorization"];
+    
+    NSDictionary *parameters = @{
+                                 
+    @"subject":@[
+    @{
+        @"value":@"A comment with Drupal 8 iOS sdk !"
+    }
+                ],
+    @"comment_body":@[
+    @{
+        @"value":@"<p>Drupal 8 will rock !.</p>\r\n",
+        @"format":@"basic_html"
+    }
+                    ]
+                                 
+                                 };
+    
+
+    [manager POSTComment:self.baseURL
+          targetEntityId:@"16"
+              parameters:parameters
+                 success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"OK Comment POSTED !");
+    }
+                 failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+
+```
