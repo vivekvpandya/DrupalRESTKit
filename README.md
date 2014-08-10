@@ -43,12 +43,12 @@ Create instance of manager , set accept header.
 }
 ```
 ### `POST` Request on node
-Set Authorization if any required. Build parameters and POST a node 
+Set Authorization if any required. Build parameters and POST a node. Here if you are posting an article pass bundle type as ```@"article"``` and pass parameters accordingly. 
 
  ```objective-c
     Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
     
-    [manager.sessionManager.requestSerializer setValue:@"Basic cm9vdDprfjNpVHJhaEQ=" forHTTPHeaderField:@"Authorization"];
+    [manager.sessionManager.requestSerializer setValue:@"your base 64  basic auth string " forHTTPHeaderField:@"Authorization"];
     
     
   NSDictionary *parameters=  @{@"uid":@[@{@"target_id":@"1"} ],@"field_tag":@[@{@"target_id":@"1"}],@"body":@[@{@"value":@"This is text",@"format":@"full_html"}],@"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]};
