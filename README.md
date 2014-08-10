@@ -42,5 +42,25 @@ Create instance of manager , set accept header.
     
 }
 ```
+### `POST` Request on node
+Set Authorization if any required. Build parameters and POST a node 
 
-
+ ```objective-c
+    Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    
+    [manager.sessionManager.requestSerializer setValue:@"Basic cm9vdDprfjNpVHJhaEQ=" forHTTPHeaderField:@"Authorization"];
+    
+    
+  NSDictionary *parameters=  @{@"uid":@[@{@"target_id":@"1"} ],@"field_tag":@[@{@"target_id":@"1"}],@"body":@[@{@"value":@"This is text",@"format":@"full_html"}],@"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]};
+    
+    
+   [manager POSTNode:self.baseURL
+          bundleType:@"tip"
+          parameters:parameters
+             success:^(NSURLSessionDataTask *task, id responseObject) {
+                 NSLog(@"OK POSTED");
+   }
+             failure:^(NSURLSessionDataTask *task, NSError *error) {
+                 NSLog(@"%@",error.description);
+             }];
+```
