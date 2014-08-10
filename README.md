@@ -165,3 +165,55 @@ Here targetEntityId is an entity id on which comment will be posted.
     }];
 
 ```
+### `GET` on comments 
+To get all comments for particular node create REST export for a view. Set entity nid as contextual filter parameter. Now use `GETView` method. [Tutorial on Contextual Filter with view](http://tntfoss-vivekvpandya.rhcloud.com/node/64) 
+
+### `PATCH` on comments
+```objective-c
+  
+   Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    [manager.sessionManager.requestSerializer setValue:@"your base 64  basic auth string" forHTTPHeaderField:@"Authorization"];
+    
+    NSDictionary *parameters = @{
+                                 @"subject":@[
+                                         @{
+                                             @"value":@"A comment update with Drupal 8 iOS sdk !"
+                                          }
+                                         ],
+                                 @"comment_body":@[
+                                         @{
+                                             @"value":@"<p>Drupal 8 will rock !. Drupal 8 SDK will also rock.</p>\r\n",
+                                             @"format":@"basic_html"
+                                            }
+                                         ]
+                                 
+                                 };
+    
+    [manager PATCHCommment:self.baseURL
+                 commentId:@"6"
+                parameters:parameters
+                   success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"OK Comment updated !");
+    }
+                   failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+
+```
+### `DELETE` on comment
+```objective-c
+    Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    
+    [manager.sessionManager.requestSerializer setValue:@"your base 64  basic auth string" forHTTPHeaderField:@"Authorization"];
+   
+    [manager DELETEComment:self.baseURL
+                 commentId:@"12"
+                   success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"OK Comment deleted !");
+    }
+                   failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+
+```
+similarly CRUD for user entity type is also available.
