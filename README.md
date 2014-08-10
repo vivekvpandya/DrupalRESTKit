@@ -51,7 +51,13 @@ Set Authorization if any required. Build parameters and POST a node. Here if you
     [manager.sessionManager.requestSerializer setValue:@"your base 64  basic auth string " forHTTPHeaderField:@"Authorization"];
     
     
-  NSDictionary *parameters=  @{@"uid":@[@{@"target_id":@"1"} ],@"field_tag":@[@{@"target_id":@"1"}],@"body":@[@{@"value":@"This is text",@"format":@"full_html"}],@"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]};
+  NSDictionary *parameters=  @{
+  @"uid":@[@{@"target_id":@"1"} ],
+  @"field_tag":@[@{@"target_id":@"1"}],
+  @"body":@[@{@"value":@"This is text",
+              @"format":@"full_html"}],
+              @"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]
+              };
     
     
    [manager POSTNode:self.baseURL
@@ -74,8 +80,9 @@ Same as POST on node.
     
     NSDictionary *parameters=  @{@"uid":@[@{@"target_id":@"1"} ],
     @"field_tag":@[@{@"target_id":@"2"}],
-    @"body":@[@{@"value":@" Hey I have updated this node via drupal 8 ios kit ",@"format":@"full_html"}]
-    ,@"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]
+    @"body":@[@{@"value":@" Hey I have updated this node via drupal 8 ios kit ",
+                @"format":@"full_html"}],
+    @"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]
     };
     
    
