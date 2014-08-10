@@ -228,5 +228,5 @@ and [Jeff Linwood ](https://github.com/jefflinwood) as mentor.
 #License
 DrupalRESTKit is available under MIT license. See LICENSE file for more info.
 
-#### Help us to improve, send us pull request.
+#### Help us to improve, send us a pull request.
 ![alt tag](https://dl.dropboxusercontent.com/u/100492838/53471681.jpg)
