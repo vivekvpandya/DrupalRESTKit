@@ -18,7 +18,7 @@ pod 'DrupalRESTKit', :git => 'https://github.com/vivekvpandya/DrupalRESTKit.git'
 iOS 7 or above
 
 #Usage
-Import ``` Drupal8RESTSessionManager.h``` and you are good to go.
+Import ``` Drupal8RESTSessionManager.h``` and you are good to go. Here in my example I am using http basic auth authentication type when required.
 
 ### ```GET``` Request on node
 Create instance of manager , set accept header.
@@ -97,4 +97,21 @@ Same as POST on node.
     }];
   ```  
 
+### `DELETE` Request on node
 
+```objective-c
+ Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    
+    
+    
+    [manager setValue:@"your base 64  basic auth string" forHTTPRequestHeader:@"Authorization"];
+    
+    [manager DELETENode:self.baseURL 
+                 nodeId:@"55" 
+                 success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"ok deleted");
+    }            failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+
+```
