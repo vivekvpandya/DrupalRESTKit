@@ -64,3 +64,30 @@ Set Authorization if any required. Build parameters and POST a node. Here if you
                  NSLog(@"%@",error.description);
              }];
 ```
+### `PATCH` Request on node
+Same as POST on node.
+```objective-c
+ Drupal8RESTSessionManager *manager = [[Drupal8RESTSessionManager alloc]init];
+    
+    [manager.sessionManager.requestSerializer setValue:@"your base 64  basic auth string" forHTTPHeaderField:@"Authorization"];
+    
+    
+    NSDictionary *parameters=  @{@"uid":@[@{@"target_id":@"1"} ],
+    @"field_tag":@[@{@"target_id":@"2"}],
+    @"body":@[@{@"value":@" Hey I have updated this node via drupal 8 ios kit ",@"format":@"full_html"}]
+    ,@"title":@[@{@"value":@"Tip Via Drupal 8 iOS sdk"}]
+    };
+    
+   
+    [manager PATCHNode:self.baseURL
+            bundleType:@"tip"
+                nodeId:@"61"
+            parameters:parameters
+               success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"UPDATED !");
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.description);
+    }];
+  ```  
+
+
